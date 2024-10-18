@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açucar de Fada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!--Cabeçalho da pagina com menu-->
+    <header>
+        <div class="logo">
+            <img src="imagens/cupckaque.jpg" alt="Logo Açucar de Fada" />
+            <h1>Açucar de Fada</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#receitas">Receitas</a>
+                        <ul class="dropdown">
+                                    <li><a href="">Doces Fáceis</a></li>
+                                    <li><a href="">Sobremesas</a></li>
+                                    <li><a href="">Bolos</a></li>    
+                        </ul>
+                </li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!--Corpo e Main da pagina-->
+
+<main id="home">
+    <!--Banner em Slides-->
+<div class="slider">
+
+    <div class="slides">
+            <!--botoes de navegaçao banner/radio buttons-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            
+            <!--Imagens do banner/slide-->
+            <div class="slide first">
+                <img src="imagens/MousseCopo.jpg" alt="Imagem da Receita 1">
+            </div>
+            <div class="slide">
+                <img src="imagens/Brownie.jpg" alt="Imagem da Receita 2">
+            </div>
+            <div class="slide">
+                <img src="imagens/Bombons.jpg" alt="Imagem da Receita 3">
+            </div>
+            <div class="slide">
+                <img src="imagens/TortaDeLimão.jpg" alt="Imagem da Receita 4">
+            </div>
+
+            <!--Navegaçao auto-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+ </div>
+
+     <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+    </div>
+</div>
+
+<div class="main-content">
+        <h2>Receitas em Destaque</h2>
+    <!--Cards com as receitas-->
+            <div class="recipe-card">
+                <div class="card-content">
+                    <img src="imagens/BoloChocolate.jpg" alt="Receita de Bolo de Chocolate com Cenoura">
+                    <div class="text-content">
+                        <h3>Receita de Bolo de Chocolate</h3>
+                        <p>Um bolo de chocolate fofinho e delicioso, perfeito para qualquer ocasião!</p>
+                        <a class="button" href="#">Ver Receita</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="card-content">
+                    <img src="imagens/Bombons.jpg" alt="Brigadeiros com Chocolate meio amargo">
+                    <div class="text-content">
+                        <h3>Bombons de Chocolate meio amargo</h3>
+                        <p>Festa de aniversário? Esta é a receita ideal que todos irão amar.</p>
+                        <a class="button" href="#">Ver Receita</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="card-content">
+                    <img src="imagens/MousseCopo.jpg" alt="Donuts Coloridos">
+                    <div class="text-content">
+                        <h3>Mousse Individual</h3>
+                        <p>Uma receita de dar água na boca, perfeita para domingo à tarde!</p>
+                        <a class="button" href="#">Ver Receita</a>
+                    </div>
+                </div>
+            </div>
+</div>
+</main>
+
+    <footer>
+        <p>&copy; 2024 Açucar de Fada</p>
+    </footer>
+
+    <!--JAvascript simples para o slides-->
+    <script src="script.js"></script>
+</body>
+</html>

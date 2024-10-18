@@ -1,0 +1,291 @@
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f6f1;
+   /* width: 100%;
+    padding: 20px 100px; /*altura do cabeçalho*/ 
+    /*align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.navbar {
+    /*flex-grow: 1; /* Para ocupar o espaço restante */
+    /*text-align: center;
+   /* font-size: 26px;
+   margin-right: 40px;*/
+    display: flex;
+    gap: 35px;
+    font-size: 20px;
+    align-items: center;
+}
+.logo {
+   display: flex;
+    align-items: center;
+    margin-right: auto;
+   
+}
+
+.logo img {
+    width: 80px; /* Ajuste o tamanho da logo */
+    height: 80x; /* Ajuste o tamanho da logo */
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+   
+}
+
+nav ul li {
+    position: relative; /* Para posicionar o dropdown */
+    margin-right: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #e8b1d5; /* Cor de fundo ao passar o mouse */
+}
+
+.dropdown {
+    display: none; /* Ocultar o dropdown por padrão */
+    position: absolute; /* Posicionamento em relação ao item pai */
+    background-color: #f2b5d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Para garantir que o dropdown fique acima de outros elementos */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Mostrar o dropdown ao passar o mouse */
+}
+
+.dropdown li {
+    margin: 0; /* Remove margem do item do dropdown */
+}
+
+
+h2 {
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    font-size: 40px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    /*border-bottom: 2px solid #ffd6e0;  Linha inferior para destaque */
+    /*padding-bottom: 10px; /* Espaçamento abaixo da linha */
+}
+
+
+/*ESTILO MENU
+
+ul{
+  list-style: none;
+  background:  #f2b5d4;
+}
+
+ul li{
+  display:inline-block;  
+  position: relative;
+}
+
+ul li a{
+   display: block;
+   padding: 20px 25px;
+   color: #fff;
+   text-decoration: none; 
+   text-align: center;
+   font-size: 20px;
+}
+
+ul li ul.dropdown li{
+    display: block;
+}
+
+ul li ul.dropdown{
+    width: 100%;
+    background: #f2b5d4;
+    position:absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover{
+    background: #f2b5d4;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+/*fim estilo menu*/
+  
+/*-------BANNER SLIDER-------*/
+
+.slider{
+    margin: 0 auto;
+    width: 1600px;
+    height: 400px; 
+    overflow: hidden;/*para as imagens ficarem uma em cima da outra*/  
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    /*para ocultar os inputs, radius*/
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    transition: 2s; 
+}
+.slide img{
+    width: 1600px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1600px; /*mesmo tamanho que o slider*/
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color:#fff;
+}
+#radio1:checked ~ .first{/*para apertar nos botoes e vir a imagem correspondente*/
+    margin-left: 0%; 
+}
+#radio2:checked ~ .first{
+    margin-left: -25%; 
+}
+#radio3:checked ~ .first{
+    margin-left: -50%; 
+}
+#radio4:checked ~ .first{
+    margin-left: -75%; 
+}
+.navigation-auto div{/*indicar qual botao esta ativo com uma borda colorida*/
+    border:2px solid #20a6ff;
+    padding:5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 1600px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px; /*organiza o espaçamento dos botoes com a indicaçao acima*/
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{/*quando o botão estiver ativo ficar com o fundo branco*/
+    background-color:#fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{/*quando o botão estiver ativo ficar com o fundo branco*/
+    background-color:#fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{/*quando o botão estiver ativo ficar com o fundo branco*/
+    background-color:#fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{/*quando o botão estiver ativo ficar com o fundo branco*/
+    background-color:#fff;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/*---------parte que configura o corpo da pagina depois do banner-----------*/
+
+.recipe-card {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex; /* Ativa o flexbox */
+}
+
+.card-content {
+    display: flex; /* Aplica flexbox ao contêiner do cartão */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    padding: 15px; /* Espaçamento interno */
+}
+
+.recipe-card img {
+    max-width: 300px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 5px; /* Bordas arredondadas na imagem */
+    margin-right: 25px; /* Espaçamento entre imagem e texto */
+}
+
+.text-content {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+/*---------Pezin da pagina-------------*/
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2b5d4;
+}
+
+.main-content {
+    /*background: linear-gradient(to bottom, #fdffb6, #ffc6ff);
+    /*padding: 20px;
+    border-radius: 5px;*/
+}
